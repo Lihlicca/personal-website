@@ -1,0 +1,101 @@
+/* Base Styles */
+:root {
+    --text-color: #1a1c20;
+    --link-color: #ffffff;
+    --background-color: #eeeff1;
+    font-size: 17px; /* Set the base font size */
+}
+
+* {
+    text-align: center;  
+    font-family: "Quicksand"; 
+}
+
+/* Header & menu */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #cbd6be;
+}
+
+.over-mij {
+    font-family: "Birthstone Bounce";
+    font-size: 1.4rem;
+    text-decoration: none;
+    font-weight: bold;
+    color: #333;
+}
+
+nav {
+    display: flex;
+    gap: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    font-family: "Figtree";
+    font-size: 1rem;
+    color: #333;
+}
+
+
+/* Welkomsbericht */
+.welkom {
+    font-family: "Indie flower";
+    font-size: 50px;
+    text-shadow: 3px 3px 3px #ababab;
+    text-align: center;
+}
+
+/* Foto */
+.foto img {
+    border-radius: 50%;
+}
+
+/* over mij */
+#over-mij {
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 2rem;
+    padding-bottom: 1rem;
+    padding-left: 2rem;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 0.5rem;
+}
+
+#over-mij .bio {
+        margin-bottom: 0.5rem;
+        padding: 0 2rem;
+        max-width: 56.25rem;
+}
+
+/* socials */
+#socials {
+    background-color: #e3ebda;
+}
+
+/* projecten */
+
+
+/* Skills */
+#skills {
+    background-color: #e3ebda;
+}
+
+/* contact */
+
+
+/* Footer */
+.footer {
+    font-family: "Figtree";
+    font-size: 12px;
+    text-align: center;
+    background-color: rgb(132, 118, 102);
+    color: beige;
+    padding: 1rem 0;
+    height: 1rem;
+}
