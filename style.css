@@ -3,7 +3,7 @@
     --text-color: #1a1c20;
     --link-color: #ffffff;
     --background-color: #eeeff1;
-    font-size: 17px; /* Set the base font size */
+    font-size: 17px;
 }
 
 * {
@@ -12,6 +12,7 @@
     margin: 0;
 }
 
+
 /* Header & menu */
 header {
     display: flex;
@@ -19,6 +20,9 @@ header {
     align-items: center;
     padding: 10px 20px;
     background-color: #cfddc8;
+    width: 100%;
+    max-width: 100vw;
+    box-sizing: border-box;
 }
 
 .over-mij {
@@ -32,9 +36,16 @@ header {
 
 nav {
     display: flex;
-    gap: 15px;
-    padding: 0 3.125rem;
+    gap: 1rem; 
+    padding: 0 2rem; /* Minder padding voor mobielvriendelijkheid */
 }
+
+/* Zorg ervoor dat er geen horizontale scroll is */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
 
 nav a {
     text-decoration: none;
@@ -48,6 +59,27 @@ nav a {
 nav a:hover {
     color: #ffffff;
 }
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 0;
+    }
+
+    nav a {
+        display: block;
+        width: 100%;
+        padding: 10px;
+    }
+}
+
 
 
 /* Welkomsbericht */
@@ -105,17 +137,23 @@ nav a:hover {
 }
 
 
-
 /* projecten */
-
+#projecten {
+    background-color: #fffffd;
+    padding: 1rem;
+}
 
 /* Skills */
 #skills {
     background-color: #f6f8f4;
+    padding: 1rem;
 }
 
 /* contact */
-
+#contact {
+    background-color: #fffffd;
+    padding: 1rem;
+}
 
 /* Footer */
 .footer {
