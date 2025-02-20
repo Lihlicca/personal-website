@@ -12,6 +12,14 @@
     margin: 0;
 }
 
+h2 {
+    font-family: "Indie flower";
+    font-size: 2.5rem; 
+    font-weight: bold; 
+    color: #333;
+    padding: 0.5rem;
+}
+
 
 /* Header & menu */
 header {
@@ -88,6 +96,7 @@ nav a:hover {
     font-size: 50px;
     text-shadow: 2px 2px 2px #ababab;
     text-align: center;
+    color: #333;
 }
 
 /* Foto */
@@ -140,19 +149,35 @@ nav a:hover {
 /* projecten */
 #projecten {
     background-color: #fffffd;
-    padding: 1rem;
+    padding: 2rem;
+    padding-bottom: 4rem;
 }
 
 /* Skills */
 #skills {
     background-color: #f6f8f4;
-    padding: 1rem;
+    padding: 2rem;
+}
+
+#skills .skills-container {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    gap: 3rem;
+}
+
+#skills .skills-container i {
+    color: #618a4a;
+    transition: color 0.3s ease;
+    font-size: 2rem;
 }
 
 /* contact */
 #contact {
     background-color: #fffffd;
-    padding: 1rem;
+    padding: 2rem;;
 }
 
 /* Footer */
