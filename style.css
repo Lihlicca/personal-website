@@ -9,6 +9,7 @@
 * {
     text-align: center;  
     font-family: "Quicksand"; 
+    margin: 0;
 }
 
 /* Header & menu */
@@ -17,7 +18,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #cbd6be;
+    background-color: #cfddc8;
 }
 
 .over-mij {
@@ -26,18 +27,26 @@ header {
     text-decoration: none;
     font-weight: bold;
     color: #333;
+    padding: 0.8rem;
 }
 
 nav {
     display: flex;
     gap: 15px;
+    padding: 0 3.125rem;
 }
 
 nav a {
     text-decoration: none;
     font-family: "Figtree";
-    font-size: 1rem;
+    font-weight: bold;
+    font-size: 0.8rem;
     color: #333;
+    padding: 0.5rem;
+}
+
+nav a:hover {
+    color: #ffffff;
 }
 
 
@@ -45,13 +54,14 @@ nav a {
 .welkom {
     font-family: "Indie flower";
     font-size: 50px;
-    text-shadow: 3px 3px 3px #ababab;
+    text-shadow: 2px 2px 2px #ababab;
     text-align: center;
 }
 
 /* Foto */
 .foto img {
     border-radius: 50%;
+    padding-top: 1.4rem;
 }
 
 /* over mij */
@@ -61,29 +71,47 @@ nav a {
     padding-right: 2rem;
     padding-bottom: 1rem;
     padding-left: 2rem;
+    padding-top: 2rem;
     display: flex;
     align-items: center;
     text-align: center;
     gap: 0.5rem;
+    background-color: #f6f8f4;
 }
 
 #over-mij .bio {
-        margin-bottom: 0.5rem;
-        padding: 0 2rem;
-        max-width: 56.25rem;
+    margin-bottom: 0.5rem;
+    padding: 0 2rem;
+    max-width: 56.25rem;
 }
 
-/* socials */
-#socials {
-    background-color: #e3ebda;
+#over-mij .socials {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    gap: 3rem;
 }
+
+#over-mij .socials i {
+    color: #618a4a;
+    transition: color 0.3s ease;
+    font-size: 3rem;
+}
+
+#over-mij .socials i:hover {
+    color: #98c180;
+}
+
+
 
 /* projecten */
 
 
 /* Skills */
 #skills {
-    background-color: #e3ebda;
+    background-color: #f6f8f4;
 }
 
 /* contact */
