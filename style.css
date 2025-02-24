@@ -1,6 +1,6 @@
 /* Base Styles */
 :root {
-    --text-color: #1a1c20;
+    --text-color: #463f39;
     --link-color: #ffffff;
     --background-color: #eeeff1;
     font-size: 18px;
@@ -9,8 +9,10 @@
 * {
     text-align: center;  
     font-family: "Quicksand"; 
+    color: rgb(79, 73, 65);
     margin: 0;
 }
+
 
 h2 {
     font-family: "Indie flower";
@@ -34,7 +36,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 20px 20px;
     background-color: #cfddc8;
     width: 100%;
     max-width: 100vw;
@@ -47,13 +49,13 @@ header {
     text-decoration: none;
     font-weight: bold;
     color: #333;
-    padding: 0.8rem;
+    padding-left: 200px;
 }
 
 nav {
     display: flex;
     gap: 1rem; 
-    padding: 0 2rem; /* Minder padding voor mobielvriendelijkheid */
+    padding-right: 200px;
 }
 
 /* Zorg ervoor dat er geen horizontale scroll is */
@@ -62,13 +64,12 @@ html, body {
     width: 100%;
 }
 
-
 nav a {
     text-decoration: none;
     font-family: "Figtree";
     font-weight: bold;
     font-size: 0.8rem;
-    color: #333;
+    color: rgb(79, 73, 65);
     padding: 0.5rem;
 }
 
@@ -81,6 +82,11 @@ nav a:hover {
         flex-direction: column;
         align-items: center;
         text-align: center;
+    }
+
+    .over-mij {
+        padding-left: 0; /* Verwijder de linker padding */
+        margin-bottom: 1rem; /* Voeg wat marge toe aan de onderkant voor ruimte */
     }
 
     nav {
@@ -98,58 +104,69 @@ nav a:hover {
 
 
 
-/* Welkomsbericht */
+/* intro */
+.intro-container {
+    background-color: #f6f8f4;
+    padding: 50px 200px;
+    display: flex;
+    gap: 7rem;
+}
+
+.foto img {
+    border-radius: 50%;
+    padding-top: 2rem;
+}
+
 .welkom {
     font-family: "Indie flower";
-    font-size: 50px;
+    font-size: 45px;
     text-shadow: 2px 2px 2px #ababab;
     text-align: center;
     color: #333;
 }
 
-/* Foto */
-.foto img {
-    border-radius: 50%;
-    padding-top: 1.4rem;
-}
-
-/* over mij */
-#over-mij {
-    flex-direction: column;
-    justify-content: center;
-    padding-right: 2rem;
-    padding-bottom: 1rem;
-    padding-left: 2rem;
-    padding-top: 2rem;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    gap: 0.5rem;
-    background-color: #f6f8f4;
-}
-
-#over-mij .bio {
+.bio {
     margin-bottom: 0.5rem;
-    padding: 0 2rem;
+    padding: 0.5rem 2rem;
     max-width: 56.25rem;
 }
 
-#over-mij .socials {
+.socials {
     display: flex; 
     justify-content: center; 
     align-items: center; 
     padding-top: 1rem;
-    padding-bottom: 2rem;
     gap: 3rem;
 }
 
-#over-mij .socials i {
-    color: #618a4a;
-    transition: color 0.3s ease;
-    font-size: 3rem;
+@media (max-width: 768px) {
+    .intro-container {
+        flex-direction: column;
+        padding: 20px; /* Verminder de padding voor kleinere schermen */
+        gap: 2rem; /* Verminder de gap voor kleinere schermen */
+    }
+
+    .foto img {
+        width: 100%; /* Zorg ervoor dat de afbeelding de volledige breedte inneemt */
+        height: auto;
+    }
+
+    .welkom {
+        font-size: 2rem; /* Verminder de font-size voor kleinere schermen */
+    }
+
+    .bio {
+        padding: 0.5rem; /* Verminder de padding voor kleinere schermen */
+    }
 }
 
-#over-mij .socials i:hover {
+.socials i {
+    color: #618a4a;
+    transition: color 0.3s ease;
+    font-size: 2.5rem;
+}
+
+.socials i:hover {
     color: #98c180;
 }
 
