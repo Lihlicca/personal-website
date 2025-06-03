@@ -1,0 +1,349 @@
+/* Base Styles */
+:root {
+    --text-color: #463f39;
+    --link-color: #ffffff;
+    --background-color: #eeeff1;
+    font-size: 18px;
+}
+
+* {
+    text-align: center;  
+    font-family: "Quicksand"; 
+    color: rgb(79, 73, 65);
+    margin: 0;
+}
+
+
+h2 {
+    font-family: "Indie flower";
+    font-size: 2.3rem; 
+    font-weight: bold; 
+    color: #333;
+    padding: 0.5rem;
+    text-shadow: 2px 2px 2px #ababab;
+}
+
+@media (max-width: 768px) {
+    h2 {
+        font-size: 2rem;
+    }
+}
+
+
+
+/* Header & menu */
+header {
+    display: flex;
+    justify-content: flex-start; /* alles aan de linkerkant */
+    align-items: center;
+    padding: 20px;
+    background-color: #cfddc8;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.header-links {
+    display: flex;
+    align-items: center;
+    gap: 2rem; /* ruimte tussen naam en menu */
+}
+
+.home {
+    font-family: "Birthstone Bounce";
+    font-size: 1.4rem;
+    text-decoration: none;
+    font-weight: bold;
+    color: #333;
+    padding-left: 200px;
+}
+
+nav {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Zorg ervoor dat er geen horizontale scroll is */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+nav a {
+    position: relative;
+    text-decoration: none;
+    font-family: "Figtree";
+    font-weight: thin;
+    font-size: 0.8rem;
+    color: rgb(79, 73, 65);
+    padding: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 2px;
+    width: 0%;
+    height: 1px;
+    background-color: #e7ffd5;
+    transition: width 0.3s ease;
+}
+
+nav a:hover {
+    color: #ffffff;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .over-mij {
+        padding-left: 0; /* Verwijder de linker padding */
+        margin-bottom: 1rem; /* Voeg wat marge toe aan de onderkant voor ruimte */
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 0;
+    }
+
+    nav a {
+        display: block;
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+
+
+/* intro */
+.divider {
+    height: 1px;
+    width: 1050px;
+    background: linear-gradient(to right, #ccc, #9c8e74, #ccc);
+    margin: 0.2em auto 0.2em auto;
+    border-radius: 5px;
+}
+
+.intro-container {
+    padding: 30px 200px;
+    display: flex;
+    justify-content: center;     /* Horizontaal centreren */
+    align-items: center;         /* Verticaal centreren */
+    gap: 7rem;
+}
+
+.foto img {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 0%;
+}
+
+.welkom {
+    font-family: "Indie flower";
+    font-size: 45px;
+    text-shadow: 2px 2px 2px #ababab;
+    text-align: center;
+    color: #333;
+}
+
+.bio {
+    padding: 0.5rem 2rem;
+    max-width: 56.25rem;
+    text-align: justify;
+}
+
+@media (max-width: 768px) {
+    .intro-container {
+        flex-direction: column;
+        padding: 20px; /* Verminder de padding voor kleinere schermen */
+        gap: 2rem; /* Verminder de gap voor kleinere schermen */
+    }
+
+    .foto img {
+        width: 100%; /* Zorg ervoor dat de afbeelding de volledige breedte inneemt */
+        height: auto;
+    }
+
+    .welkom {
+        font-size: 2rem; /* Verminder de font-size voor kleinere schermen */
+    }
+
+    .bio {
+        padding: 0.5rem; /* Verminder de padding voor kleinere schermen */
+    }
+}
+
+.socials {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    padding-top: 1rem;
+    gap: 3rem;
+}
+
+.socials i {
+    color: #618a4a;
+    transition: color 0.3s ease;
+    font-size: 2.5rem;
+}
+
+.socials i:hover {
+    color: #98c180;
+}
+
+
+/* projecten */
+#projecten {
+    padding: 2rem;
+    padding-bottom: 4rem;
+}
+
+/* Skills */
+#skills {
+    padding: 2rem;
+}
+
+.skills-container {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    gap: 3rem;
+}
+
+.skills-container i {
+    color: #8ea284;
+    transition: color 0.3s ease;
+    font-size: 2rem;
+}
+
+.skills-container i:hover{
+    color: #b5cea9;
+    transform: scale(1.2);         /* vergroot het icoon */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.skill {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip {
+    visibility: hidden;
+    background-color: #6d7f64;
+    color: #fff;
+    text-align: center;
+    padding: 0.3rem 0.6rem;
+    border-radius: 5px;
+    font-size: 0.7rem;
+    position: absolute;
+    bottom: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    transition-delay: 0s; /* geen vertraging bij verbergen */
+    white-space: nowrap;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.skill:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0.5s; /* pas na 0.3s zichtbaar worden */
+}
+
+
+
+/* contact */
+#contact {
+    background-color: #fffffd;
+    padding: 2rem;;
+}
+
+/* Footer */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Figtree";
+    font-size: 12px;
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    color: beige;
+    padding: 1rem 2rem;
+    padding-left: 200px;
+    padding-right: 200px;
+}
+
+.footer a {
+    color: beige;
+    margin-left: 0.5rem;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #ffffff;
+}
+
+.footer-left {
+    font-family: "Figtree";
+    font-weight: lighter;
+    font-size: 12px;
+    text-align: left;
+    color: rgb(255, 255, 255);
+    padding: 1rem 0;
+    height: 1rem;
+}
+
+    /* ------- Socials rechts ------- */
+.social-icons {
+    display: flex;
+    gap: 8px; /* afstand tussen de iconen */
+}
+
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* centreert de iconen horizontaal */
+    gap: 10px;           /* ruimte tussen de iconen */
+}
+
+.footer-right img {
+    width: 10px;
+    height: 10px;
+}
+
+.footer-right i {
+    color: #ffffff;
+    transition: color 0.3s ease;
+    font-size: 1.5rem;
+    font-weight: lighter;
+}
+
+.footer-right i:hover {
+    color: #99958e;
+    transition: color 0.3s ease;
+}
+
+@media (max-width: 600px) {
+    .footer {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
+}
