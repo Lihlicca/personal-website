@@ -142,11 +142,18 @@ nav a:hover::after {
     gap: 7rem;
 }
 
-.foto img {
+.fotogroot img {
     width: 350px;
     height: 350px;
     object-fit: cover;
     border-radius: 0%;
+}
+
+.fotoklein img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
 }
 
 .welkom {
